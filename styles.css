@@ -1,0 +1,350 @@
+/* HiveHub Custom Styles
+   Purpose: Adds a clean, modern, startup-friendly design layer
+   on top of jQuery Mobile for the HiveHub corporate social app.
+*/
+
+/* ---------- Global Page Styling ---------- */
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #263238;
+  margin: 0;
+  padding: 0;
+}
+
+.ui-page,
+.ui-content {
+  background: #f4f7fb !important;
+}
+
+.ui-content {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+.center {
+  text-align: center;
+}
+
+.info {
+  background: #eef6ff;
+  border-left: 5px solid #1f7ae0;
+  color: #24415c;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin: 15px auto;
+  max-width: 720px;
+}
+
+.error {
+  color: #b00020;
+  font-weight: bold;
+}
+
+.taken {
+  color: #b00020;
+  font-weight: bold;
+}
+
+.available {
+  color: #0b7a3b;
+  font-weight: bold;
+}
+
+/* ---------- Header / Branding ---------- */
+.ui-header {
+  background: linear-gradient(135deg, #103d5f, #1f7ae0) !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
+}
+
+#logo {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  padding-top: 12px;
+}
+
+#logo::before {
+  content: "🐝 ";
+}
+
+#robin {
+  display: none;
+}
+
+.username {
+  font-size: 14px;
+  font-weight: 500;
+  color: #e8f2ff;
+  padding: 6px 0 12px;
+  text-align: center;
+}
+
+/* ---------- Navigation Buttons ---------- */
+.ui-btn,
+input[type='submit'] {
+  border-radius: 24px !important;
+  border: none !important;
+  background: #1f7ae0 !important;
+  color: #ffffff !important;
+  text-shadow: none !important;
+  font-weight: 700 !important;
+  box-shadow: 0 3px 8px rgba(31, 122, 224, 0.24) !important;
+}
+
+.ui-btn:hover,
+input[type='submit']:hover {
+  background: #155aa6 !important;
+  color: #ffffff !important;
+}
+
+.ui-btn:active,
+input[type='submit']:active {
+  transform: scale(0.98);
+}
+
+/* ---------- Forms ---------- */
+form {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(20, 50, 80, 0.08);
+  margin: 18px auto;
+  max-width: 760px;
+}
+
+label {
+  font-weight: 700;
+  color: #234;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='url'],
+input[type='file'],
+textarea,
+select {
+  border-radius: 10px !important;
+  border: 1px solid #ccd7e0 !important;
+  background: #ffffff !important;
+  color: #263238 !important;
+  padding: 10px !important;
+  box-shadow: none !important;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  border-color: #1f7ae0 !important;
+  box-shadow: 0 0 0 3px rgba(31, 122, 224, 0.15) !important;
+}
+
+/* ---------- Homepage / Dashboard Cards ---------- */
+.hive-hero {
+  background: linear-gradient(135deg, #ffffff, #eef6ff);
+  border-radius: 20px;
+  padding: 28px 22px;
+  margin: 18px auto;
+  max-width: 900px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(20, 50, 80, 0.1);
+}
+
+.hive-hero h1,
+.hive-hero h2,
+h1,
+h2,
+h3 {
+  color: #103d5f;
+}
+
+.hive-hero p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #425466;
+}
+
+.hive-card,
+.profile-card,
+.member-card,
+.message-card,
+.group-card,
+.event-card,
+.mood-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px;
+  margin: 15px 0;
+  box-shadow: 0 4px 14px rgba(20, 50, 80, 0.08);
+  border: 1px solid #e3eaf1;
+}
+
+.hive-card h3,
+.profile-card h3,
+.member-card h3,
+.message-card h3 {
+  margin-top: 0;
+  color: #103d5f;
+}
+
+/* ---------- Profile and Member Directory ---------- */
+.profile-photo,
+.member-photo,
+.thumbnail,
+img.profile,
+img.thumbnail {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 3px 10px rgba(20, 50, 80, 0.18);
+}
+
+.profile-meta,
+.member-meta {
+  color: #5b6b7a;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.badge,
+.recognition-badge {
+  display: inline-block;
+  background: #fff4d6;
+  color: #875900;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 4px 4px 4px 0;
+}
+
+.skill-tag,
+.interest-tag,
+.group-tag {
+  display: inline-block;
+  background: #e9f3ff;
+  color: #155aa6;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  margin: 4px 4px 4px 0;
+}
+
+/* ---------- Messaging ---------- */
+.message-card {
+  border-left: 5px solid #1f7ae0;
+}
+
+.private-message {
+  border-left-color: #7b61ff;
+  background: #f7f5ff;
+}
+
+.public-message {
+  border-left-color: #1f7ae0;
+}
+
+.message-time {
+  color: #7b8794;
+  font-size: 12px;
+}
+
+/* ---------- Mood / Sentiment Check-ins ---------- */
+.mood-card {
+  background: linear-gradient(135deg, #ffffff, #f8fbff);
+}
+
+.mood-positive {
+  border-left: 5px solid #18a058;
+}
+
+.mood-neutral {
+  border-left: 5px solid #f2a900;
+}
+
+.mood-negative {
+  border-left: 5px solid #d64545;
+}
+
+.sentiment-score {
+  font-size: 26px;
+  font-weight: 800;
+  color: #103d5f;
+}
+
+/* ---------- Events and Announcements ---------- */
+.event-card {
+  border-left: 5px solid #ffb703;
+}
+
+.announcement {
+  background: #fffaf0;
+  border: 1px solid #ffe0a3;
+  border-radius: 14px;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+/* ---------- Footer ---------- */
+.ui-footer {
+  background: #103d5f !important;
+  color: #ffffff !important;
+  border: none !important;
+  text-align: center;
+}
+
+.ui-footer a {
+  color: #d9ecff !important;
+}
+
+/* ---------- Mobile Friendly Layout ---------- */
+@media screen and (max-width: 700px) {
+  #logo {
+    font-size: 24px;
+  }
+
+  .ui-content {
+    padding: 12px;
+  }
+
+  form,
+  .hive-hero,
+  .hive-card,
+  .profile-card,
+  .member-card,
+  .message-card,
+  .group-card,
+  .event-card,
+  .mood-card {
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  .ui-btn {
+    display: block !important;
+    width: auto !important;
+    margin: 8px auto !important;
+  }
+
+  .profile-photo,
+  .member-photo,
+  .thumbnail,
+  img.profile,
+  img.thumbnail {
+    width: 82px;
+    height: 82px;
+  }
+}
